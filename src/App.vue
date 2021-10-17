@@ -32,4 +32,11 @@ export default {
   margin: 0 auto;
   max-width: 50%;
 }
+
+@media screen and (max-width: 640px) {
+  .container {
+    max-width: 100%;
+  }
+  
+}
 </style>
