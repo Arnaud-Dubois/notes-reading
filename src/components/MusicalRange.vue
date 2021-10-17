@@ -2,20 +2,22 @@
   <div>
     <div class="musical-range">
         <div :key="line" v-for="line in 4" class="musical-range-line"></div>
-        <transition-group name="list">
-            <div
-                :key="index + note.name"
-                v-for="(note, index) in range"
-                :style="`
-                    left: ${index * 24}px;
-                    bottom: ${note.y}px;
-                    background-color: ${isColorMode ? note.color : 'black'};
-                `"
-                class="music-note"
-            >
-            </div>
-        </transition-group>
-        
+        <TrebleClef class="range-mode-icon"/>
+        <div class="range-notes-list">
+            <transition-group name="list">
+                <div
+                    :key="index + note.name"
+                    v-for="(note, index) in range"
+                    :style="`
+                        left: ${index * 24}px;
+                        bottom: ${note.y}px;
+                        background-color: ${isColorMode ? note.color : 'black'};
+                    `"
+                    class="music-note"
+                >
+                </div>
+            </transition-group>
+        </div>
     </div>
     <div class="controls-container">
         <button class="button button-primary" @click="getNewRange">Get new notes</button>
@@ -32,8 +34,13 @@
 </template>
 
 <script>
+import TrebleClef from './icons/TrebleClef.vue'
+
 export default {
     name: 'MusicalRange',
+    components: {
+        TrebleClef
+    },
     data() {
         return {
             notes: [
@@ -43,6 +50,8 @@ export default {
                 { name: 'Fa', y: '2', pos: '60', color: '#99d521' },
                 { name: 'Sol', y: '8', pos: '80', color: '#14b945' },
                 { name: 'La', y: '16', pos: '100', color: '#3362d0' },
+                { name: 'Si', y: '24', pos: '120', color: '#6562d0' },
+                { name: 'Do+1', y: '30', pos: '140', color: '#A362d0' },
             ],
             range: [],
             rangeNumber: 10,
@@ -156,5 +165,17 @@ export default {
     .list-enter, .list-leave-to /* .list-leave-active below version 2.1.8 */ {
         opacity: 0;
         transform: translateY(30px);
+    }
+
+    /* Range mode */
+    .range-mode-icon {
+        position: absolute;
+        left: 0;
+        top: -6px;
+    }
+
+    .range-notes-list {
+        margin-left: 60px;
+        position: absolute;
     }
 </style>
