@@ -1,25 +1,19 @@
 <template>
   <div id="app">
+    <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/documentation">Documentation</router-link>
+    </div>
     <div class="container">
-      <div>
-        <Documentation />
-      </div>
-      <h1>Notes reading</h1>
-      <MusicalRange />
+      <router-view/>
     </div>
   </div>
 </template>
 
 <script>
-import MusicalRange from "./components/MusicalRange.vue";
-import Documentation from "./components/Documentation.vue";
 
 export default {
   name: "App",
-  components: {
-    MusicalRange,
-    Documentation,
-  },
 };
 </script>
 
@@ -34,7 +28,8 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  padding-top: 60px;
+  background: #f2f2f2;
 }
 
 .container {
@@ -46,5 +41,18 @@ export default {
   .container {
     max-width: 100%;
   }
+}
+
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
 }
 </style>

@@ -46,7 +46,7 @@
 </template>
 
 <script>
-import DocumentationItem from './DocumentationItem.vue'
+import DocumentationItem from '@/components/DocumentationItem.vue'
 
 export default {
   name: "Documentation",
