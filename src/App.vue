@@ -1,24 +1,33 @@
 <template>
   <div id="app">
     <div class="container">
+      <div>
+        <Documentation />
+      </div>
       <h1>Notes reading</h1>
-      <MusicalRange/>
-    </div>    
+      <MusicalRange />
+    </div>
   </div>
 </template>
 
 <script>
-import MusicalRange from './components/MusicalRange.vue'
+import MusicalRange from "./components/MusicalRange.vue";
+import Documentation from "./components/Documentation.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    MusicalRange
-  }
-}
+    MusicalRange,
+    Documentation,
+  },
+};
 </script>
 
 <style>
+:root {
+  --hover-color: rgb(231, 231, 231);
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -37,6 +46,5 @@ export default {
   .container {
     max-width: 100%;
   }
-  
 }
 </style>
