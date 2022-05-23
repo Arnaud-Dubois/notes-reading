@@ -4,11 +4,13 @@ import VueRouter from 'vue-router'
 /* pages */
 import Home from "@/pages/Home.vue"
 import Documentation from "@/pages/Documentation.vue"
+import Quizz from "@/pages/Quizz.vue"
 
 
 const routes = [
   { path: '/', name:'Home', component: Home },
   { path: '/documentation', name:'Documentation', component: Documentation },
+  { path: '/quizz', name:'Quizz', component: Quizz },
 ]
 
 const router = new VueRouter({

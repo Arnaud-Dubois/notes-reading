@@ -44,6 +44,7 @@ export default {
   transition: background-color .2s ease-in-out;
   padding: 0 .25rem;
   border-radius: 3px;
+  border-bottom: 1px solid lightgrey;
 }
 
 .documentation-item:hover {
