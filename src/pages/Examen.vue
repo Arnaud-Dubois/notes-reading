@@ -13,17 +13,17 @@
     </Message>
 
     <ul class="index-list">
-      <li>La portée</li>
-      <li>La gamme</li>
-      <li>Stacatto / Legato</li>
-      <li>Les instruments</li>
-      <li>Les indications de tempo</li>
-      <li>Les indications de nuances</li>
-      <li>Les rythmes et silences</li>
+      <li><a href="#portee">1. La portée</a></li>
+      <li><a href="#gamme">2. La gamme</a></li>
+      <li><a href="#stacatto">3. Stacatto / Legato</a></li>
+      <li><a href="#instruments">4. Les instruments</a></li>
+      <li><a href="#tempo">5. Les indications de tempo</a></li>
+      <li><a href="#nuances">6. Les indications de nuances</a></li>
+      <li><a href="#rythmes">7. Les rythmes et silences</a></li>
     </ul>
 
     <section class="section">
-      <h2>La portée</h2>
+      <h2 id="portee">1. La portée</h2>
       <article class="article">
         <Message>
           <p>
@@ -73,7 +73,7 @@
     </section>
 
     <section class="section">
-      <h2>La gamme</h2>
+      <h2 id="gamme">2. La gamme</h2>
       <article class="article">
         <p>
           Une <strong><em>gamme</em></strong
@@ -155,7 +155,7 @@
     </section>
 
     <section class="section">
-      <h2>Stacatto / Legato</h2>
+      <h2 id="stacatto">3. Stacatto / Legato</h2>
       <article class="article">
         <h3>Legato (ou note portée)</h3>
         <p>Les notes sont liées les unes avec les autres.</p>
@@ -169,7 +169,7 @@
     </section>
 
     <section class="section">
-      <h2>Les instruments</h2>
+      <h2 id="instruments">4. Les instruments</h2>
       <p>
         Il existe plusieurs familles d'instruments : (pour l'exame, il faut être
         capable d'en citer un de chaque famille)
@@ -241,7 +241,7 @@
     </section>
 
     <section class="section">
-      <h2>Les indications de tempo : (Pas pour l'examen)</h2>
+      <h2 id="tempo">5. Les indications de tempo : (Pas pour l'examen)</h2>
       <p>
         La vitesse d'un morceau est, traditionnellement, désignée par des mots
         italiens.
@@ -281,8 +281,8 @@
     </section>
 
     <section class="section">
-      <h2>
-        Les indications de nuances : (pour l'examen, connaître piano et forte)
+      <h2 id="nuances">
+        6. Les indications de nuances : (pour l'examen, connaître piano et forte)
       </h2>
       <p>
         Les nuances indiquent au musicien avec quelle intensité (donc la force
@@ -324,7 +324,7 @@
     </section>
 
     <section class="section">
-      <h2>Les rythmes et silences (pas pour l'examen)</h2>
+      <h2 id="rythmes">7. Les rythmes et silences (pas pour l'examen)</h2>
 
       <div class="columns columns-3 rythms-silences">
         <ul>

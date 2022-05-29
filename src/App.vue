@@ -20,6 +20,13 @@ export default {
 </script>
 
 <style>
+
+/* smooth scroll */
+html {
+	scroll-behavior: smooth;
+}
+
+
 :root {
   --hover-color: rgb(231, 231, 231);
 }
