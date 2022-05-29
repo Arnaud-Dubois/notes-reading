@@ -1,7 +1,6 @@
 <template>
   <div>
-    <div class="musical-range">
-        <div :key="line" v-for="line in 4" class="musical-range-line"></div>
+    <MusicStaff>
         <TrebleClef class="range-mode-icon"/>
         <div class="range-notes-list">
             <transition-group name="list">
@@ -18,15 +17,15 @@
                 </div>
             </transition-group>
         </div>
-    </div>
+    </MusicStaff>
     <div class="controls-container">
-        <button class="button button-primary" @click="getNewRange">Get new notes</button>
+        <button class="button button-primary" @click="getNewRange">Nouvelles notees</button>
         <div class="input-container">
-            <label for="rangeNumber">Number of notes</label>
+            <label for="rangeNumber">Nombre de notes</label>
             <input name="rangeNumber" type="number" min="0" max="40" v-model="rangeNumber">
         </div>
         <div>
-            <label for="colorMode">toggle colorMode</label>
+            <label for="colorMode">Mode couleur</label>
             <input type="checkbox" name="colorMode" id="colorMode" v-model="isColorMode">
         </div>
     </div>
@@ -35,11 +34,13 @@
 
 <script>
 import TrebleClef from './icons/TrebleClef.vue'
+import MusicStaff from './icons/MusicStaff.vue'
 
 export default {
     name: 'MusicalRange',
     components: {
-        TrebleClef
+        TrebleClef,
+        MusicStaff
     },
     data() {
         return {
@@ -113,23 +114,6 @@ export default {
 
     .button-primary:hover {
         background-color: black;
-    }
-    
-    .musical-range {
-        width: 100%;
-        position: relative;
-        /* height: 64px; */
-        /* background-color: aliceblue; */
-    }
-
-    .musical-range-line:first-of-type {
-        border-top: var(--line);
-    }
-
-    .musical-range-line {
-        border-bottom: var(--line);
-        width: 100%;
-        height: 12px;
     }
     
     .music-note {

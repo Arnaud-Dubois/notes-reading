@@ -1,9 +1,10 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/documentation">Documentation</router-link> |
-      <router-link to="/quizz">Quizz</router-link>
+      <router-link to="/">Examen</router-link> |
+      <router-link to="/notes">Lecture de notes</router-link> |
+      <router-link to="/documentation">Documentation (en cours)</router-link>
+      <!-- <router-link to="/quizz">Quizz</router-link> | -->
     </div>
     <div class="container">
       <router-view/>
@@ -23,6 +24,10 @@ export default {
   --hover-color: rgb(231, 231, 231);
 }
 
+body {
+  background: #f2f2f2;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -30,7 +35,6 @@ export default {
   text-align: center;
   color: #2c3e50;
   padding-top: 60px;
-  background: #f2f2f2;
 }
 
 .container {

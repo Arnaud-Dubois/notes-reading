@@ -2,19 +2,7 @@
   <div>
     <h1>Documentation</h1>
     
-    <div>
-        
-    </div>
-    <Message title="FM1 - 2021/2022 / Examen 7/06 - 14/06">
-        <ul>
-            <li>Lecture de note</li>
-            <li>Chant connu (la merveille de la musique)</li>
-            <li>Examen de rythme</li>
-            <li>Clef de Sol</li>
-            <li>Examen de dictée (aprège/accord, conjoint/disjoint)</li>
-            <li>Examen de théorie</li>
-        </ul>
-    </Message>
+
     
 
     <h2>Notes</h2>
@@ -99,13 +87,12 @@
 
 <script>
 import DocumentationItem from '@/components/DocumentationItem.vue'
-import Message from '@/components/Message.vue'
+
 
 export default {
   name: "Documentation",
   components: {
       DocumentationItem,
-      Message
   },
   data() {
       return {
