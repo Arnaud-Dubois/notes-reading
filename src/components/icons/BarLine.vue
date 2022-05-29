@@ -7,7 +7,7 @@ export default {
   name: "BarLine",
   props: {
     position: {
-        type: Number,
+        type: [Number,String],
         default: 0
     }
   },
