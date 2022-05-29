@@ -26,6 +26,9 @@ html {
 	scroll-behavior: smooth;
 }
 
+img {
+  max-width: 100%;
+}
 
 :root {
   --hover-color: rgb(231, 231, 231);
