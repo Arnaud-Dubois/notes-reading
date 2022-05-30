@@ -45,7 +45,7 @@
       <article class="article">
         <h3>La clé de Sol</h3>
         <p>
-          La <strong><em>clé de Sol</em></strong> est important ! Elle nous
+          La <strong><em>clé de Sol</em></strong> est importante ! Elle nous
           indique où se trouvent les notes.
         </p>
         <p>(Vous devrez la dessiner sur la portée à l'examen)</p>
@@ -83,7 +83,7 @@
           >.
         </p>
         <div>
-          <div><strong> TODO</strong></div>
+          <div class="todo"><strong> TODO</strong></div>
           <MusicStaff :hasBarLines="false">
             <TrebleClef class="range-mode-icon" />
           </MusicStaff>
@@ -146,7 +146,7 @@
           autres notes sont séparées par un ton.
         </p>
         <div>
-          <h4>TODO</h4>
+          <div class="todo">TODO</div>
           <MusicStaff :hasBarLines="false">
             <TrebleClef class="range-mode-icon" />
           </MusicStaff>
@@ -171,7 +171,7 @@
     <section class="section">
       <h2 id="instruments">4. Les instruments</h2>
       <p>
-        Il existe plusieurs familles d'instruments : (pour l'exame, il faut être
+        Il existe plusieurs familles d'instruments : (pour l'examen, il faut être
         capable d'en citer un de chaque famille)
       </p>
 
@@ -282,14 +282,15 @@
 
     <section class="section">
       <h2 id="nuances">
-        6. Les indications de nuances : (pour l'examen, connaître piano et forte)
+        6. Les indications de nuances : (pour l'examen, connaître piano et
+        forte)
       </h2>
       <p>
         Les nuances indiquent au musicien avec quelle intensité (donc la force
         de chaque note) il doit joue rdu morceau. Voici les nuances principales.
       </p>
 
-      <div class="columns columns-3">
+      <!-- <div class="columns columns-3">
         <ul>
           <li>pp</li>
           <li>p</li>
@@ -320,13 +321,168 @@
           <li>de plus en plus fort</li>
           <li>de moins en moins fort</li>
         </ul>
+      </div> -->
+      <div class="grid-3 gap-1">
+        <!-- Pianissimo -->
+        <div>pp</div>
+        <div>pianissimo (ou double-piano)</div>
+        <div>très doux</div>
+
+        <!-- Piano -->
+        <div>p</div>
+        <div>piano</div>
+        <div>doux</div>
+
+        <!-- Mezzo Piano -->
+        <div>mp</div>
+        <div>mezzo-piano</div>
+        <div>plutot doux</div>
+
+        <!-- Mezzo Forte -->
+        <div>mf</div>
+        <div>mezzo-forte</div>
+        <div>plutot fort</div>
+
+        <!-- Forte -->
+        <div>f</div>
+        <div>forte</div>
+        <div>fort</div>
+
+        <!-- Fortissimo -->
+        <div>ff</div>
+        <div>fortissimo (ou double-forte)</div>
+        <div>très fort</div>
+
+        <!-- Crescendo -->
+        <div>&lt;</div>
+        <div>crescendo</div>
+        <div>de plus en plus fort</div>
+
+        <!-- Decrescendo -->
+        <div>&gt;</div>
+        <div>descrescendo</div>
+        <div>de moins en moins fort</div>
       </div>
     </section>
 
     <section class="section">
       <h2 id="rythmes">7. Les rythmes et silences (pas pour l'examen)</h2>
 
-      <div class="columns columns-3 rythms-silences">
+      <div class="grid-3 gap-1">
+        <!--  -->
+        <div class="columns-title">Les temps</div>
+        <div class="columns-title">Les notes</div>
+        <div class="columns-title">Les silences</div>
+
+        <!--  -->
+        <div>4</div>
+        <div>
+          <img
+            src="./../../src/assets/notes/ronde.png"
+            alt="ronde"
+            width="24"
+          />
+          <div>la ronde</div>
+        </div>
+        <div><img src="" alt="(chapeau à l'envers)" width="24" /> la pause</div>
+
+        <!--  -->
+        <div>3</div>
+        <div>
+          <img
+            src="./../../src/assets/notes/blanche_pointee.png"
+            alt="blanche pointée"
+            width="24"
+          />
+          <div>la blanche pointée</div>
+        </div>
+        <div>
+          <img
+            src="./../../src/assets/notes/demi_pause_pointee.png"
+            alt="demi-pause pointée"
+            width="24"
+          />
+          <div>la demi-pause pointée</div>
+        </div>
+
+        <!--  -->
+        <div>2</div>
+        <div>
+          <img
+            src="./../../src/assets/notes/blanche.png"
+            alt="blanche"
+            width="24"
+          />
+          <div>la banche</div>
+        </div>
+        <div>
+          <img
+            src="./../../src/assets/notes/demi_pause.png"
+            alt="demi-pause"
+            width="24"
+          />
+          <div>la demi-pause</div>
+        </div>
+
+        <!--  -->
+        <div>1 1/2</div>
+        <div>
+          <img
+            src="./../../src/assets/notes/noire_pointee.png"
+            alt="noire pointée"
+            width="24"
+          />
+          <div>la noire pointée</div>
+        </div>
+        <div>
+          <img src="" alt="soupir pointé" width="24" /> le soupir pointé
+        </div>
+
+        <!--  -->
+        <div>1</div>
+        <div>
+          <img
+            src="./../../src/assets/notes/noire.png"
+            alt="noire"
+            width="24"
+          />
+          <div>la noire</div>
+        </div>
+        <div><img src="" alt="soupir" width="24" /> le soupir</div>
+
+        <div>1/2</div>
+        <div>
+          <img
+            src="./../../src/assets/notes/croche.png"
+            alt="croche"
+            width="24"
+          />
+          <div>la croche</div>
+        </div>
+        <div>
+          <img
+            src="./../../src/assets/notes/demi_soupir.png"
+            alt="demi-soupir"
+            width="24"
+          />
+          <div>le demi-soupir</div>
+        </div>
+
+        <div>1/4</div>
+        <div>
+          <img
+            src="./../../src/assets/notes/double_croche1.png"
+            alt="double croche"
+            width="24"
+          />
+          <div>la double-croche</div>
+        </div>
+        <div>
+          <img src="" alt="quart-soupir" width="24" /> le quart de soupir?
+        </div>
+      </div>
+
+      <!-- <div class="columns columns-3 rythms-silences">
         <ul>
           <li class="columns-title">Les temps</li>
           <li>4</li>
@@ -345,7 +501,7 @@
               alt="ronde"
               width="24"
             />
-            la ronde
+            <div>la ronde</div>
           </li>
           <li>
             <img
@@ -353,7 +509,7 @@
               alt="blanche pointée"
               width="24"
             />
-            la blanche pointée
+            <div>la blanche pointée</div>
           </li>
           <li>
             <img
@@ -361,7 +517,7 @@
               alt="blanche"
               width="24"
             />
-            la banche
+            <div>la banche</div>
           </li>
           <li>
             <img
@@ -369,7 +525,7 @@
               alt="noire pointée"
               width="24"
             />
-            la noire pointée
+            <div>la noire pointée</div>
           </li>
           <li>
             <img
@@ -377,7 +533,7 @@
               alt="noire"
               width="24"
             />
-            la noire
+            <div>la noire</div>
           </li>
           <li>
             <img
@@ -385,7 +541,7 @@
               alt="croche"
               width="24"
             />
-            la croche
+            <div>la croche</div>
           </li>
           <li>
             <img
@@ -393,7 +549,7 @@
               alt="double croche"
               width="24"
             />
-            la double-croche
+            <div>la double-croche</div>
           </li>
         </ul>
         <ul>
@@ -405,14 +561,15 @@
               alt="demi-pause pointée"
               width="24"
             />
-            la demi-pause pointée
+            <div>la demi-pause pointée</div>
           </li>
           <li>
             <img
               src="./../../src/assets/notes/demi_pause.png"
               alt="demi-pause"
               width="24"
-            />la demi-pause
+            />
+            <div>la demi-pause</div>
           </li>
           <li>
             <img src="" alt="soupir pointé" width="24" /> le soupir pointé
@@ -424,13 +581,13 @@
               alt="demi-soupir"
               width="24"
             />
-            le demi-soupir
+            <div>le demi-soupir</div>
           </li>
           <li>
             <img src="" alt="quart-soupir" width="24" /> le quart de soupir?
           </li>
         </ul>
-      </div>
+      </div> -->
     </section>
   </div>
 </template>
@@ -473,6 +630,16 @@ export default {
   column-count: 3;
 }
 
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-transform: capitalize;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+
 .rythms-silences {
   display: flex;
   justify-content: space-between;
@@ -489,17 +656,9 @@ export default {
 }
 
 .section {
-  /* list-style-type: none;
-  transition: background-color .2s ease-in-out;
-  padding: 0 .25rem;
-  border-radius: 3px; */
   padding: 3rem 0;
   border-bottom: 1px solid lightgrey;
   text-align: left;
-}
-
-.section h2 {
-  /* color: red!important; */
 }
 
 .article {

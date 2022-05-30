@@ -7,44 +7,46 @@
       <!-- <router-link to="/quizz">Quizz</router-link> | -->
     </div>
     <div class="container">
-      <router-view/>
+      <router-view />
     </div>
   </div>
 </template>
 
 <script>
-
 export default {
   name: "App",
 };
 </script>
 
 <style>
+:root {
+  --hover-color: rgb(231, 231, 231);
+  --primary-color: #00947e;
+  --background-color: #f2f2f2;
+}
 
 /* smooth scroll */
 html {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
+}
+
+body {
+  padding: 1rem;
+  background: var(--background-color);
 }
 
 img {
   max-width: 100%;
 }
 
-:root {
-  --hover-color: rgb(231, 231, 231);
-}
-
-body {
-  background: #f2f2f2;
-}
-
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Merriweather", serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  padding-top: 60px;
+  /* padding-top: 60px; */
+  line-height: 1.5rem;
 }
 
 .container {
@@ -63,11 +65,41 @@ body {
 }
 
 #nav a {
-  font-weight: bold;
   color: #2c3e50;
 }
 
 #nav a.router-link-exact-active {
+  color: var(--primary-color); /* #42b983; */
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+a,
+strong {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+a:hover {
   color: #42b983;
+}
+
+p {
+  color: #404c58;
+}
+
+.todo {
+  color: black;
+  background: yellow;
+  padding: 1rem;
+  border-radius: 3px;
+}
+
+/* text utilities */
+.text-sm {
+  font-size: 0.75rem;
 }
 </style>

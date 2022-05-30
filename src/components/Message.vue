@@ -19,8 +19,9 @@ export default {
 <style>
 .message {
   padding: 1rem;
+  margin: 1rem 0;
   background: #ebfffc;
-  color: #00947e;
+  color: var(--primary-color);
   border: 1px solid #a0ebdf;
   border-radius: 0.25rem;
 }

@@ -14,18 +14,21 @@ import BarLine from "@/components/icons/BarLine.vue";
 export default {
   name: "MusicStaff",
   components: {
-    BarLine
+    BarLine,
   },
   props: {
     hasBarLines: {
       type: Boolean,
       default: true,
-    }
-  }
+    },
+  },
 };
 </script>
 
 <style>
+:root {
+  --line: 2px solid black;
+}
 .musical-staff {
   width: 100%;
   position: relative;

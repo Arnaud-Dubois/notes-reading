@@ -87,9 +87,7 @@ export default {
 </script>
 
 <style>
-    :root {
-        --line: 2px solid black;
-    }
+
 
     .controls-container {
         margin: 4rem 0;
