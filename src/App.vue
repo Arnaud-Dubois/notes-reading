@@ -46,7 +46,7 @@ img {
   text-align: center;
   color: #2c3e50;
   /* padding-top: 60px; */
-  line-height: 1.5rem;
+  line-height: 1.65rem;
 }
 
 .container {

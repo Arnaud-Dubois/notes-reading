@@ -92,6 +92,7 @@
         <div>
           <PianoKeyboard />
         </div>
+        <h5>Le clavier ne marche pas très bien sur mobile</h5>
         <Message>
           <p>
             <strong>Note:</strong>
@@ -171,8 +172,8 @@
     <section class="section">
       <h2 id="instruments">4. Les instruments</h2>
       <p>
-        Il existe plusieurs familles d'instruments : (pour l'examen, il faut être
-        capable d'en citer un de chaque famille)
+        Il existe plusieurs familles d'instruments : (pour l'examen, il faut
+        être capable d'en citer un de chaque famille)
       </p>
 
       <article class="article">
@@ -181,7 +182,11 @@
           <li>
             <h4>Les cordes frottées :</h4>
             <ul>
-              <li>Le violon</li>
+              <li>
+                <a href="https://fr.wikipedia.org/wiki/Violon" target="_blank"
+                  >Le violon</a
+                >
+              </li>
               <li>L'alto</li>
               <li>Le violoncelle</li>
               <li>La contrebasse</li>
@@ -209,7 +214,13 @@
           <li>
             <h4>La famille des bois :</h4>
             <ul>
-              <li>La flûte à bec</li>
+              <li>
+                <a
+                  href="https://fr.wikipedia.org/wiki/Fl%C3%BBte_%C3%A0_bec"
+                  target="_blank"
+                  >La flûte à bec</a
+                >
+              </li>
               <li>Le hautbois</li>
               <li>La flûte traversière</li>
               <li>Le basson</li>
@@ -384,7 +395,14 @@
           />
           <div>la ronde</div>
         </div>
-        <div><img src="" alt="(chapeau à l'envers)" width="24" /> la pause</div>
+        <div>
+          <img
+            src="./../../src/assets/notes/pause.png"
+            alt="(chapeau à l'envers)"
+            width="24"
+          />
+          <div>la pause</div>
+        </div>
 
         <!--  -->
         <div>3</div>
@@ -435,7 +453,12 @@
           <div>la noire pointée</div>
         </div>
         <div>
-          <img src="" alt="soupir pointé" width="24" /> le soupir pointé
+          <img
+            src="./../../src/assets/notes/soupir_pointe.png"
+            alt="soupir pointé"
+            width="24"
+          />
+          <div>le soupir pointé</div>
         </div>
 
         <!--  -->
@@ -448,7 +471,14 @@
           />
           <div>la noire</div>
         </div>
-        <div><img src="" alt="soupir" width="24" /> le soupir</div>
+        <div>
+          <img
+            src="./../../src/assets/notes/soupir.png"
+            alt="soupir"
+            width="24"
+          />
+          <div>le soupir</div>
+        </div>
 
         <div>1/2</div>
         <div>
@@ -478,7 +508,12 @@
           <div>la double-croche</div>
         </div>
         <div>
-          <img src="" alt="quart-soupir" width="24" /> le quart de soupir?
+          <img
+            src="./../../src/assets/notes/quart_de_soupir.png"
+            alt="quart-soupir"
+            width="24"
+          />
+          <div>le quart de soupir</div>
         </div>
       </div>
 
