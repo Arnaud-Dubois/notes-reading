@@ -182,22 +182,12 @@
           <li>
             <h4>Les cordes frottées :</h4>
             <ul>
-              <li>
-                <a href="https://fr.wikipedia.org/wiki/Violon" target="_blank"
-                  >Le violon</a
-                >
-              </li>
-              <li>L'alto</li>
-              <li>Le violoncelle</li>
-              <li>La contrebasse</li>
-              <li>La viole</li>
+              <InstrumentItem :key="corde.name" v-for="corde in instruments.cordes.frottees" :src="corde.src" :name="corde.name" />
               <li>etc...</li>
             </ul>
             <h4>Les cordes pincées :</h4>
             <ul>
-              <li>La guitare</li>
-              <li>Le luth</li>
-              <li>La harpe</li>
+              <InstrumentItem :key="corde.name" v-for="corde in instruments.cordes.pincees" :src="corde.src" :name="corde.name" />
               <li>etc...</li>
             </ul>
             <h4>Les cordes frappées :</h4>
@@ -214,26 +204,13 @@
           <li>
             <h4>La famille des bois :</h4>
             <ul>
-              <li>
-                <a
-                  href="https://fr.wikipedia.org/wiki/Fl%C3%BBte_%C3%A0_bec"
-                  target="_blank"
-                  >La flûte à bec</a
-                >
-              </li>
-              <li>Le hautbois</li>
-              <li>La flûte traversière</li>
-              <li>Le basson</li>
-              <li>La clarinette</li>
-              <li>etc...</li>
+              <InstrumentItem :key="bois.name" v-for="bois in instruments.vents.bois" :src="bois.src" :name="bois.name" />
             </ul>
           </li>
           <li>
             <h4>La famille des cuivres :</h4>
             <ul>
-              <li>La trompette</li>
-              <li>Le trombone</li>
-              <li>La cor</li>
+              <InstrumentItem :key="cuivre.name" v-for="cuivre in instruments.vents.cuivres" :src="cuivre.src" :name="cuivre.name" />
               <li>etc...</li>
             </ul>
           </li>
@@ -242,10 +219,7 @@
       <article class="article">
         <h3>3. Les percussions :</h3>
         <ul>
-          <li>La batterie</li>
-          <li>Le xylophone</li>
-          <li>Le tambour</li>
-          <li>Les cymbales</li>
+          <InstrumentItem :key="percussion.name" v-for="percussion in instruments.percussions" :src="percussion.src" :name="percussion.name" />
           <li>etc...</li>
         </ul>
       </article>
@@ -632,6 +606,7 @@ import Message from "@/components/Message.vue";
 import MusicStaff from "@/components/icons/MusicStaff.vue";
 import TrebleClef from "@/components/icons/TrebleClef.vue";
 import PianoKeyboard from "@/components/icons/PianoKeyboard.vue";
+import InstrumentItem from "@/components/instruments/InstrumentItem.vue";
 
 export default {
   name: "Examen",
@@ -640,7 +615,51 @@ export default {
     MusicStaff,
     TrebleClef,
     PianoKeyboard,
+    InstrumentItem,
   },
+  data() {
+    return {
+      instruments: {
+        cordes:
+          {
+            frottees: [
+              { name:"Le violon", src:"https://fr.wikipedia.org/wiki/Violon" },
+              { name:"L'alto", src:"https://fr.wikipedia.org/wiki/Alto_(instrument_%C3%A0_cordes)" },
+              { name:"La contrebasse", src:"https://fr.wikipedia.org/wiki/Contrebasse" },
+              { name:"La viole", src:"https://fr.wikipedia.org/wiki/Viole_de_gambe" },
+            ],
+            pincees: [
+              { name:"La guitare", src:"https://fr.wikipedia.org/wiki/Guitare" },
+              { name:"Le luth", src:"https://fr.wikipedia.org/wiki/Luth" },
+              { name:"Le harpe", src:"https://fr.wikipedia.org/wiki/Harpe" },
+            ],
+          },
+        vents:
+        {
+          bois: [
+            { name:"La flûte à bec", src:"https://fr.wikipedia.org/wiki/Fl%C3%BBte_%C3%A0_bec" },
+            { name:"Le hautbois", src:"https://fr.wikipedia.org/wiki/Hautbois" },
+            { name:"La flûte traversière", src:"https://fr.wikipedia.org/wiki/Fl%C3%BBte_traversi%C3%A8re" },
+            { name:"Le basson", src:"https://fr.wikipedia.org/wiki/Basson" },
+            { name:"La clarinette", src:"https://fr.wikipedia.org/wiki/Clarinette" },
+          ],
+          cuivres: [
+            { name:"La trompette", src:"https://fr.wikipedia.org/wiki/Trompette" },
+            { name:"Le trombone", src:"https://fr.wikipedia.org/wiki/Trombone_(instrument)" },
+            { name:"Le cor", src:"https://fr.wikipedia.org/wiki/Cor_d%27harmonie" },
+          ],
+        },
+        percussions:
+        [
+          { name:"La batterie", src:"https://fr.wikipedia.org/wiki/Batterie_(instrument)" },
+          { name:"Le xylophone", src:"https://fr.wikipedia.org/wiki/Xylophone" },
+          { name:"Le tambour", src:"https://fr.wikipedia.org/wiki/Tambour_(instrument)" },
+          { name:"La cymbale", src:"https://fr.wikipedia.org/wiki/Cymbale" },
+          
+        ]
+      }
+    }
+  }
 };
 </script>
 
