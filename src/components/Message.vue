@@ -26,7 +26,7 @@ export default {
   border-radius: 0.25rem;
 }
 .message .title {
-  background-color: #00d1b2;
+  background-color: var(--primary-light-color);
 }
 .message .content {
   text-align: left;

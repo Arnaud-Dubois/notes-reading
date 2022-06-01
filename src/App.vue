@@ -22,6 +22,7 @@ export default {
 :root {
   --hover-color: rgb(231, 231, 231);
   --primary-color: #00947e;
+  --primary-light-color: #00d1b2;
   --background-color: #f2f2f2;
 }
 
