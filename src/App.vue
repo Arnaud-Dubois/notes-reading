@@ -50,6 +50,10 @@ img {
   line-height: 1.65rem;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Fira Sans', sans-serif;
+}
+
 .container {
   margin: 0 auto;
   max-width: 50%;

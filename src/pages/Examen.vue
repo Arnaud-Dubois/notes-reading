@@ -83,10 +83,10 @@
           >.
         </p>
         <div>
-          <div class="todo"><strong> TODO</strong></div>
-          <MusicStaff :hasBarLines="false">
+          <div><img src="./../assets/gamme_de_do.jpg" alt="Gamme de Do" /></div>
+          <!-- <MusicStaff :hasBarLines="false">
             <TrebleClef class="range-mode-icon" />
-          </MusicStaff>
+          </MusicStaff> -->
         </div>
         <p>Voici la gamme de do sur le piano.</p>
         <div>
@@ -147,10 +147,10 @@
           autres notes sont séparées par un ton.
         </p>
         <div>
-          <div class="todo">TODO</div>
-          <MusicStaff :hasBarLines="false">
+          <div><img src="./../assets/tons.jpg" alt="Exemple tons" /></div>
+          <!-- <MusicStaff :hasBarLines="false">
             <TrebleClef class="range-mode-icon" />
-          </MusicStaff>
+          </MusicStaff> -->
         </div>
       </article>
     </section>
