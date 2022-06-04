@@ -42,7 +42,7 @@ export default {
         { key: "e", name: "sol", css: "sol", file: g4 },
         { key: "f", name: "la", css: "la", file: a5 },
         { key: "g", name: "si", css: "si", file: b5 },
-        { key: "do_plus", name: "do_plus", css: "do+", file: c5 },
+        { key: "do_plus", name: "do+", css: "do+", file: c5 },
       ],
       blacks: [
         { key: "h", name: "do#", css: "do" },
@@ -75,7 +75,8 @@ export default {
 }
 
 .white-keys {
-  display: flex;
+  /* display: flex; */
+  display: inline-flex;
   min-height: 140px;
 }
 
@@ -91,6 +92,7 @@ export default {
   transition: background-color .1s ease-in;
 }
 
+
 .white-keys div:hover {
   background-color: var(--hover-color);
 }
@@ -101,7 +103,7 @@ export default {
   display: flex;
 }
 
-.black-keys div {
+.black-keys > div {
   background-color: black;
   position: absolute;
   width: 30px;
@@ -114,20 +116,50 @@ export default {
   background-color: var(--hover-color);
 } */
 
+@media screen and (max-width: 640px) {
+  .white-keys > div {
+    width: 36px;
+  }
+
+  .black-keys > div {
+    width: 18px;
+  }
+}
+
+
 /* notes */
 .do {
-  left: 60px;
+  left: 48px;
 }
 .mi {
-  left: 120px;
+  left: 110px;
 }
 .fa {
-  left: 240px;
+  left: 234px;
 }
 .sol {
-  left: 300px;
+  left: 296px;
 }
 .si {
-  left: 360px;
+  left: 358px;
+}
+
+
+@media screen and (max-width: 640px) {
+  .do {
+    left: 30px;
+  }
+  .mi {
+    left: 67px;
+  }
+  .fa {
+    left: 143px;
+  }
+  .sol {
+    left: 181px;
+  }
+  .si {
+    left: 219px;
+  }
 }
 </style>

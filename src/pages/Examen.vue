@@ -3,11 +3,11 @@
     <h1>Examen de théorie</h1>
     <Message title="FM1 - 2021/2022 / Examen 7/06 - 14/06">
       <ul>
-        <li>Lecture de note</li>
+        <li>Lecture de notes</li>
         <li>Chant connu (la merveille de la musique)</li>
         <li>Examen de rythme</li>
         <li>Clef de Sol</li>
-        <li>Examen de dictée (aprège/accord, conjoint/disjoint)</li>
+        <li>Examen de dictée (arpège/accord, conjoint/disjoint)</li>
         <li>Examen de théorie</li>
       </ul>
     </Message>
@@ -92,7 +92,7 @@
         <div>
           <PianoKeyboard />
         </div>
-        <h5>Le clavier ne marche pas très bien sur mobile</h5>
+        <!-- <h5>Le clavier ne marche pas très bien sur mobile</h5> -->
         <Message>
           <p>
             <strong>Note:</strong>
@@ -121,10 +121,10 @@
       <article class="article">
         <h3>Le dièse</h3>
         <p>
-          Un dièse (#) devant une note indique que celle-ci doit monter d'un
-          demi-ton. Sur le piano, le do# est donc la touche noire à droite du
-          do. A l'inverse, un bémo (b) devant une note indique qu'elle descend
-          d'un demi-ton.
+          Un <strong><em>dièse(#)</em></strong> devant une note indique que celle-ci doit <strong><em>monter d'un
+          demi-ton</em></strong>. Sur le piano, le do# est donc la touche noire à droite du
+          do. A l'inverse, un <strong><em>bémol(b)</em></strong> devant une note indique qu'elle <strong><em>descend
+          d'un demi-ton</em></strong>.
         </p>
       </article>
       <article class="article">
@@ -183,18 +183,18 @@
             <h4>Les cordes frottées :</h4>
             <ul>
               <InstrumentItem :key="corde.name" v-for="corde in instruments.cordes.frottees" :src="corde.src" :name="corde.name" />
-              <li>etc...</li>
             </ul>
+            <QuickLink src="https://fr.wikipedia.org/wiki/Instrument_%C3%A0_cordes_frott%C3%A9es?tableofcontents=1" name="Plus sur les instruments à cordes frottées..." />
             <h4>Les cordes pincées :</h4>
             <ul>
               <InstrumentItem :key="corde.name" v-for="corde in instruments.cordes.pincees" :src="corde.src" :name="corde.name" />
-              <li>etc...</li>
             </ul>
+            <QuickLink src="https://fr.wikipedia.org/wiki/Instrument_%C3%A0_cordes_pinc%C3%A9es?tableofcontents=1" name="Plus sur les instruments à cordes pincées..." />
             <h4>Les cordes frappées :</h4>
             <ul>
-              <li>Le piano, aussi considéré comme un instrument à clavier</li>
-              <li>etc...</li>
+              <InstrumentItem :key="corde.name" v-for="corde in instruments.cordes.frappees" :src="corde.src" :name="corde.name" />
             </ul>
+            <QuickLink src="https://fr.wikipedia.org/wiki/Instrument_%C3%A0_cordes_frapp%C3%A9es?tableofcontents=1" name="Plus sur les instruments à cordes frappées..." />
           </li>
         </ul>
       </article>
@@ -206,13 +206,14 @@
             <ul>
               <InstrumentItem :key="bois.name" v-for="bois in instruments.vents.bois" :src="bois.src" :name="bois.name" />
             </ul>
+            <QuickLink src="https://fr.wikipedia.org/wiki/Bois_(musique)" name="Plus sur les bois..." />
           </li>
           <li>
             <h4>La famille des cuivres :</h4>
             <ul>
               <InstrumentItem :key="cuivre.name" v-for="cuivre in instruments.vents.cuivres" :src="cuivre.src" :name="cuivre.name" />
-              <li>etc...</li>
             </ul>
+            <QuickLink src="https://fr.wikipedia.org/wiki/Cuivres_(musique)" name="Plus sur les cuivres..." />
           </li>
         </ul>
       </article>
@@ -220,7 +221,7 @@
         <h3>3. Les percussions :</h3>
         <ul>
           <InstrumentItem :key="percussion.name" v-for="percussion in instruments.percussions" :src="percussion.src" :name="percussion.name" />
-          <li>etc...</li>
+          <QuickLink src="https://fr.wikipedia.org/wiki/Instrument_de_percussion" name="Plus sur les percussions..." />
         </ul>
       </article>
     </section>
@@ -272,7 +273,7 @@
       </h2>
       <p>
         Les nuances indiquent au musicien avec quelle intensité (donc la force
-        de chaque note) il doit joue rdu morceau. Voici les nuances principales.
+        de chaque note) il doit jouer du morceau. Voici les nuances principales.
       </p>
 
       <!-- <div class="columns columns-3">
@@ -607,6 +608,7 @@ import MusicStaff from "@/components/icons/MusicStaff.vue";
 import TrebleClef from "@/components/icons/TrebleClef.vue";
 import PianoKeyboard from "@/components/icons/PianoKeyboard.vue";
 import InstrumentItem from "@/components/instruments/InstrumentItem.vue";
+import QuickLink from "@/components/layouts/QuickLink.vue";
 
 export default {
   name: "Examen",
@@ -616,6 +618,7 @@ export default {
     TrebleClef,
     PianoKeyboard,
     InstrumentItem,
+    QuickLink
   },
   data() {
     return {
@@ -632,6 +635,9 @@ export default {
               { name:"La guitare", src:"https://fr.wikipedia.org/wiki/Guitare" },
               { name:"Le luth", src:"https://fr.wikipedia.org/wiki/Luth" },
               { name:"Le harpe", src:"https://fr.wikipedia.org/wiki/Harpe" },
+            ],
+            frappees: [
+              { name:"Le piano, aussi considéré comme un instrument à clavier", src:"https://fr.wikipedia.org/wiki/Piano" },
             ],
           },
         vents:
